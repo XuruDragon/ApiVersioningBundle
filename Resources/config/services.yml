@@ -1,0 +1,13 @@
+services:
+#    xuru_dragon_versioning.example:
+#        class: XuruDragon\VersioningBundle\Example
+#        arguments: ["@service_id", "plain_value", "%parameter%"]
+
+    xuru_dragon_versioning.factory.changes_factory:
+        class: XuruDragon\VersioningBundle\Factory\ChangesFactory
+        arguments: [ '@request_stack', '']
+
+    xuru_dragon_versioning.event_listener.versioning_listener:
+        class: XuruDragon\VersioningBundle\EventListener\VersioningListener
+        arguments: ['@request_stack', '@xuru_dragon_versioning.factory.changes_factory', '']
+
