@@ -1,0 +1,34 @@
+{
+  "name": "xurudragon/api-versioning-bundle",
+  "type": "symfony-bundle",
+  "description": "Symfony API VersioningBundle",
+  "keywords": ["versioning", "api"],
+  "license": "MIT",
+  "homepage": "https://github.com/XuruDragon/VersioningBundle",
+  "authors": [
+    {
+      "name": "XuruDragon"
+    }
+  ],
+  "require": {
+    "php": ">=5.5.9",
+    "symfony/symfony": ">=3.3"
+  },
+  "config": {
+    "sort-packages": true
+  },
+  "autoload": {
+    "psr-4": {
+      "XuruDragon\\ApiVersioningBundle\\": ""
+    },
+    "exclude-from-classmap": [
+      "/Tests/"
+    ]
+  },
+  "autoload-dev": {
+    "psr-4": {
+      "XuruDragon\\ApiVersioningBundle\\Tests\\": "/Tests/"
+    }
+  },
+  "minimum-stability": "dev"
+}
