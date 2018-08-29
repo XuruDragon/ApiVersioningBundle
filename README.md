@@ -2,6 +2,8 @@
 
 Informations
 ============
+[![Build Status](https://travis-ci.org/XuruDragon/ApiVersioningBundle.svg?branch=master)](https://travis-ci.org/XuruDragon/ApiVersioningBundle) - master
+
 This bundle provide you a way to handle multiple version of your api.
 See `Usage` section to know how ise this bundle
 
