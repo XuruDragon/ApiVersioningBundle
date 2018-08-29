@@ -1,10 +1,9 @@
 <?php
 
-namespace XuruDragon\VersioningBundle\Changes;
+namespace XuruDragon\ApiVersioningBundle\Changes;
 
 /**
- * Interface ChangesInterface
- * @package XuruDragon\VersioningBundle\Changes
+ * Interface ChangesInterface.
  */
 interface ChangesInterface
 {

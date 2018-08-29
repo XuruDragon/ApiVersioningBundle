@@ -1,13 +1,12 @@
 <?php
 
-namespace XuruDragon\VersioningBundle\Factory;
+namespace XuruDragon\ApiVersioningBundle\Factory;
 
 use Symfony\Component\HttpFoundation\RequestStack;
 use XuruDragon\VersioningBundle\Changes\AbstractChanges;
 
 /**
- * Class ChangesFactory
- * @package XuruDragon\VersioningBundle\Factory
+ * Class ChangesFactory.
  */
 class ChangesFactory
 {
@@ -23,8 +22,10 @@ class ChangesFactory
 
     /**
      * ChangesFactory constructor.
+     *
      * @param RequestStack $requestStack
-     * @param array $versions
+     * @param array        $versions
+     *
      * @throws \ReflectionException
      */
     public function __construct(RequestStack $requestStack, array $versions)
@@ -96,7 +97,7 @@ class ChangesFactory
              * So we should use reflection in this case.
              */
             $reflectionClass = new \ReflectionClass($class);
-            if (!$reflectionClass->implementsInterface('App\VersionChanges\VersionChangesInterface')) {
+            if (!$reflectionClass->implementsInterface('XuruDragon\ApiVersioningBundle\Changes\ChangesInterface')) {
                 throw new \RuntimeException(sprintf('Class "%s" does not implement VersionChangesInterface.', $class));
             }
 

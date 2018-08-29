@@ -1,10 +1,9 @@
 <?php
 
-namespace XuruDragon\VersioningBundle\Changes;
+namespace XuruDragon\ApiVersioningBundle\Changes;
 
 /**
- * Class Changes000
- * @package XuruDragon\VersioningBundle\Changes
+ * Class Changes000.
  */
 class Changes000 extends AbstractChanges
 {

@@ -1,14 +1,12 @@
 <?php
 
-namespace XuruDragon\VersioningBundle\Changes;
-
+namespace XuruDragon\ApiVersioningBundle\Changes;
 
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\RequestStack;
 
 /**
- * Class AbstractChanges
- * @package XuruDragon\VersioningBundle\Changes
+ * Class AbstractChanges.
  */
 abstract class AbstractChanges implements ChangesInterface
 {

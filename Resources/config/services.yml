@@ -3,11 +3,11 @@ services:
 #        class: XuruDragon\VersioningBundle\Example
 #        arguments: ["@service_id", "plain_value", "%parameter%"]
 
-    xuru_dragon_versioning.factory.changes_factory:
-        class: XuruDragon\VersioningBundle\Factory\ChangesFactory
+    xuru_dragon_api_versioning.factory.changes_factory:
+        class: XuruDragon\ApiVersioningBundle\Factory\ChangesFactory
         arguments: [ '@request_stack', '']
 
-    xuru_dragon_versioning.event_listener.versioning_listener:
-        class: XuruDragon\VersioningBundle\EventListener\VersioningListener
-        arguments: ['@request_stack', '@xuru_dragon_versioning.factory.changes_factory', '']
+    xuru_dragon_api_versioning.event_listener.versioning_listener:
+        class: XuruDragon\ApiVersioningBundle\EventListener\ApiVersioningListener
+        arguments: ['@request_stack', '@xuru_dragon_api_versioning.factory.changes_factory', '']
 

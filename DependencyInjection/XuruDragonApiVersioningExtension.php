@@ -1,17 +1,16 @@
 <?php
 
-namespace XuruDragon\VersioningBundle\DependencyInjection;
+namespace XuruDragon\ApiVersioningBundle\DependencyInjection;
 
-use Symfony\Component\DependencyInjection\ContainerBuilder;
 use Symfony\Component\Config\FileLocator;
-use Symfony\Component\HttpKernel\DependencyInjection\Extension;
+use Symfony\Component\DependencyInjection\ContainerBuilder;
 use Symfony\Component\DependencyInjection\Loader;
+use Symfony\Component\HttpKernel\DependencyInjection\Extension;
 
 /**
- * Class XuruDragonVersioningExtension
- * @package XuruDragon\VersioningBundle\DependencyInjection
+ * Class XuruDragonApiVersioningExtension.
  */
-class XuruDragonVersioningExtension extends Extension
+class XuruDragonApiVersioningExtension extends Extension
 {
     /**
      * {@inheritdoc}
@@ -24,10 +23,10 @@ class XuruDragonVersioningExtension extends Extension
         $configuration = new Configuration();
         $config = $this->processConfiguration($configuration, $configs);
 
-        $listener_definition = $container->getDefinition('xuru_dragon_versioning.event_listener.versioning_listener');
+        $listener_definition = $container->getDefinition('xuru_dragon_api_versioning.event_listener.versioning_listener');
         $listener_definition->replaceArgument(2, $config['header_name']);
 
-        $factory_definition = $container->getDefinition('xuru_dragon_versioning.factory.changes_factory');
+        $factory_definition = $container->getDefinition('xuru_dragon_api_versioning.factory.changes_factory');
         $factory_definition->replaceArgument(1, $config['versions']);
     }
 }
